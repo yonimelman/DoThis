@@ -28,12 +28,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
-        final TextView mTextView = (TextView) findViewById(R.id.response_text) ;
+        final TextView mTextView = (TextView) findViewById(R.id.response_text);
         RequestQueue queue = Volley.newRequestQueue(this);
         String base_url = "http://10.10.20.114:8000";
         String url = base_url + "/get_or_create_user";
         System.out.println("Calling url " + url);
-        Intent intent = new Intent(this, MainActivity.class);
+        final Intent intent = new Intent(this, MainActivity.class);
 
         EditText editText = (EditText) findViewById(R.id.username_text);
         String user_name = editText.getText().toString();
@@ -47,6 +47,8 @@ public class LoginActivity extends AppCompatActivity {
                             try {
                                 String user_id = response.getString("user_id");
                                 mTextView.setText("Received user id: "+ user_id);
+                                intent.putExtra("user_id", user_id);
+                                startActivity(intent);
                             } catch (Exception e) {
                                 System.out.println("Bad JSON Response");
                                 mTextView.setText("ERROR ");
