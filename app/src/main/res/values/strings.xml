@@ -5,6 +5,7 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="add">Add New Activity</string>
     <string name="title_activity_login">Login</string>
 
     <!-- Strings related to login -->
@@ -26,4 +27,6 @@
     <string name="button_msg">Let\'s Do This!</string>
     <string name="title_activity_add_event">AddEventActivity</string>
 
+    <string name="title_activity_events">events</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>
