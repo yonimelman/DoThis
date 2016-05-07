@@ -20,4 +20,10 @@
         completions."
     </string>
     <string name="title_activity_main">MainActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="add_event_title">Add Event</string>
+    <string name="button_msg">Let\'s Do This!</string>
+    <string name="title_activity_add_event">AddEventActivity</string>
+
 </resources>
